@@ -10,7 +10,7 @@ class DarkModeScreen extends StatefulWidget {
 }
 
 class _DarkModeScreenState extends State<DarkModeScreen> {
-  String groupValue = "light"; // default
+  String groupValue = "light"; 
 
   @override
   Widget build(BuildContext context) {
