@@ -1,9 +1,20 @@
+import 'package:defunder/loginaccessble/checkboxscreen.dart';
+import 'package:defunder/loginaccessble/oneselecter.dart';
+import 'package:defunder/loginaccessble/radiobotton.dart';
+import 'package:defunder/loginwithapiphoneotp/apiandarraycondition.dart';
+import 'package:defunder/loginwithapiphoneotp/apicolorquerity.dart';
+import 'package:defunder/loginwithapiphoneotp/imageproductapi.dart';
+import 'package:defunder/loginwithapiphoneotp/loginwithphone.dart';
 import 'package:defunder/passwordhide/hidetest.dart';
+import 'package:defunder/provider/apicolorquerityprovider.dart';
+import 'package:defunder/provider/arrayprovider.dart';
 import 'package:defunder/provider/countprovider.dart';
 import 'package:defunder/provider/faviroteprovider.dart';
+import 'package:defunder/provider/imageproviderapiprovider.dart';
 import 'package:defunder/provider/loginprovider.dart';
+import 'package:defunder/provider/loginwithphoneprovider.dart';
 import 'package:defunder/provider/slideprovider.dart';
-import 'package:defunder/provider/themeprovider.dart'; // <- Themeprovider import karna na bhoolna
+import 'package:defunder/provider/themeprovider.dart'; 
 import 'package:defunder/screens/countscreen.dart';
 import 'package:defunder/screens/darkmode.screen.dart';
 import 'package:defunder/screens/favirotescren.dart';
@@ -28,6 +39,10 @@ class MyApp extends StatelessWidget {
         ChangeNotifierProvider(create: (_) => Faviroteprovider()),
         ChangeNotifierProvider(create: (_) => Themeprovider()),
         ChangeNotifierProvider(create: (_) => Loginprovider()),
+        ChangeNotifierProvider(create: (_)=>Loginwithphoneprovider()),
+        ChangeNotifierProvider(create: (_)=>Imageproviderapiprovider()),
+        ChangeNotifierProvider(create: (_)=>Arrayprovider()),
+        ChangeNotifierProvider(create: (_)=>Apicolorquerityprovider()),
         
       ],
       child: Builder(
@@ -44,7 +59,14 @@ class MyApp extends StatelessWidget {
               brightness: Brightness.dark,
               primaryColor: Colors.cyanAccent,
             ),
-            home:LoginScreen()
+            home:Oneselecter()
+            //Checkboxscreen()
+            //Radiobottonscreen()
+            //Apicolorquerity()
+            //Apiandarraycondition()
+            //Imageproductapi()
+            //Loginwithphone()
+            //LoginScreen()
             // HiheTest()
             //DarkModeScreen()
             // FaviroteScreen(), // Default screen
